@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login - JAVED.AI</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#eef2f7;
+text-align:center;
+}
+
+header{
+background:#1e2a38;
+color:white;
+padding:25px;
+font-size:28px;
+}
+
+input{
+padding:10px;
+margin:10px;
+font-size:16px;
+}
+
+button{
+padding:10px 25px;
+background:#2c7be5;
+color:white;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+button:hover{
+background:#1a5ed9;
+}
+
+</style>
+
+<script>
+
+function login(){
+
+var role=document.getElementById("role").value;
+
+if(role=="teacher"){
+location.href="teacher.html";
+}
+
+else if(role=="student"){
+location.href="student.html";
+}
+
+else if(role=="admin"){
+location.href="admin.html";
+}
+
+else{
+alert("Select valid role");
+}
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<header>
+Login — JAVED.AI
+</header>
+
+<h2>Select Role</h2>
+
+<select id="role">
+
+<option value="">Choose Role</option>
+<option value="teacher">Teacher</option>
+<option value="student">Student</option>
+<option value="admin">Admin</option>
+
+</select>
+
+<br><br>
+
+<button onclick="login()">
+Login
+</button>
+
+</body>
+</html>
